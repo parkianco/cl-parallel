@@ -1,0 +1,8 @@
+cl-parallel
+Copyright (c) 2024 CLPIC Contributors
+
+This software was originally extracted from the CLPIC project
+(Common Lisp P2P Intellectual Property Chain).
+
+The work-stealing deque implementation is based on the algorithm described in:
+"Dynamic Circular Work-Stealing Deque" - Chase & Lev, SPAA 2005

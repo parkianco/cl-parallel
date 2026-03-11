@@ -1,0 +1,25 @@
+# SBCL FASL files
+*.fasl
+*.fas
+*.lib
+*.x86f
+*.sparcf
+*.sparc64f
+*.hppa64f
+*.ppcf
+*.ppc64f
+
+# ASDF
+*.asd~
+
+# Editor backups
+*~
+\#*\#
+.\#*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local development
+.cache/
