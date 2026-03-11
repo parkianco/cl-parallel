@@ -2,7 +2,7 @@
 
 (asdf:defsystem #:cl-parallel
   :description "High-performance work-stealing thread pool using SBCL native threading"
-  :author "CLPIC Contributors"
+  :author "Parkian Company LLC"
   :license "BSD-3-Clause"
   :version "1.0.0"
   :depends-on ()
