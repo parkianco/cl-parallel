@@ -76,8 +76,8 @@
     (let ((pool (make-thread-pool :num-workers 4)))
       (unwind-protect
           (let ((futures (loop for i from 1 to 10
-                               collect (submit-task pool (lambda () (* i i))
-                                                    i))))
+                               collect (let ((n i))
+                                         (submit-task pool (lambda () (* n n)))))))
             (assert-equal '(1 4 9 16 25 36 49 64 81 100) (await-all futures)))
         (shutdown-thread-pool pool))))
 
