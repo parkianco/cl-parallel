@@ -131,8 +131,8 @@
 
 (defun submit-task (pool fn &rest args)
   "Submit a task to the thread pool. Returns a future for the result."
-  (let ((future (make-future))
-        (task (list* fn future args)))
+  (let* ((future (make-future))
+         (task (list* fn future args)))
     (sb-concurrency:enqueue task (thread-pool-global-queue pool))
     (record-task-submitted)
     ;; Wake up a worker
