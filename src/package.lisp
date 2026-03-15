@@ -6,7 +6,9 @@
 (defpackage #:cl-parallel
   (:use #:cl)
   (:export
-   ;; Work-Stealing Deque
+   #:with-parallel-timing
+   #:parallel-batch-process
+   #:parallel-health-check;; Work-Stealing Deque
    #:work-stealing-deque
    #:make-work-stealing-deque
    #:deque-push-bottom

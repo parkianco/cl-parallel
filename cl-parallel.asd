@@ -5,19 +5,17 @@
 
 (asdf:defsystem #:cl-parallel
   :description "High-performance work-stealing thread pool using SBCL native threading"
-  :author "Parkian Company LLC"
+  :author "Park Ian Co"
   :license "Apache-2.0"
   :version "0.1.0"
   :depends-on ()
   :serial t
   :components ((:file "package")
                (:module "src"
-                :serial t
-                :components ((:file "deque")
-                             (:file "future")
-                             (:file "pool")
-                             (:file "primitives")
-                             (:file "stats"))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-parallel" :depends-on ("package" "conditions" "types"))))))
   :in-order-to ((asdf:test-op (test-op #:cl-parallel/test))))
 
 (asdf:defsystem #:cl-parallel/test
