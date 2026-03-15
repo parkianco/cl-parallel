@@ -6,7 +6,11 @@
 (defpackage #:cl-parallel
   (:use #:cl)
   (:export
-   #:with-parallel-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-parallel-timing
    #:parallel-batch-process
    #:parallel-health-check;; Work-Stealing Deque
    #:work-stealing-deque
